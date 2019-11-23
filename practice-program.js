@@ -3,5 +3,8 @@ const reverseString = (str) => {
     for (let lastIndex = str.length - 1; lastIndex >= 0; lastIndex--) {
       reversedString += str[lastIndex];
     }
-      return reversedString
+      return reversedString;
   }
+
+
+  reverseString('hello world');

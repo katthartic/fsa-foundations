@@ -6,6 +6,6 @@ describe('reverseString', function(){
     })
 
     it('returns a string', function(){
-        expect(typeof reverseString.toBe('string')
+        expect(typeof reverseString('hello world')).toBe('string')
     })
 })
