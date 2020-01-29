@@ -9,7 +9,7 @@
 <body>
     <ul id='companiesList'></ul>
     <script>
-        const companiesList = document.querySelector(#companiesList)
+        const companiesList = document.querySelector('#companiesList')
         const renderCompanies = (companies) => {
             const html = companies.map( company => {
                 return `
@@ -17,12 +17,13 @@
                     ${company.name}
                 </li>`
             }).join('')
+            
             companiesList.innerHTML = html
         }
 
         fetch('https://acme-users-api-rev.herokuapp.com/api/companies')
             .then(response => response.json())
-            .then(result => renderCompanies)
+            .then(renderCompanies)
     </script>
 </body>
 </html>
