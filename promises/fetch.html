@@ -10,11 +10,22 @@
     <ul id='companiesList'></ul>
     <script>
         const companiesList = document.querySelector('#companiesList')
+        // companiesList.addEventListener('click', (ev) => {
+        //     const target = ev.target
+        //     if(target.tagName === 'A') {
+        //         const id = target.getAttribute('data-id')
+        //         fetch(`https://acme-users-api-rev.herokuapp.com/api/companies/${id}/companyProfits`)
+        //             .then(response => response.json())
+        //             .then(render)
+        //     }
+        // })
+
         const renderCompanies = (companies) => {
             const html = companies.map( company => {
                 return `
                 <li>
                     ${company.name}
+                    <a href='#' data-id='${company.id}'>Show profits</a>
                 </li>`
             }).join('')
             
