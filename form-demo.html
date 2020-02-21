@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <style>
+            input {
+                height: 3rem
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Form Demo</h1>
+        <form>
+            <input name="email" placeholder="Enter email">
+            <input name="dateOfHire" placeholder="Enter date of hire">
+            <button class="clear">Clear Date of Hire</button>
+            <button>Save</button>
+        </form>
+    </body>
+    <script>
+        const form = document.querySelector('form')
+
+        form.addEventListener('submit', (ev) => {
+            ev.preventDefault()
+            const emailInput = form.querySelector('[name="email"]')
+            const dateOfHireInput = form.querySelector('[name="dateOfHire"]')
+            const dateOfHire = new Date(dateOfHireInput.value)
+            console.log(dateOfHire.getHours())
+            console.log(emailInput, dateOfHireInput)
+        })
+
+    </script>
+</html>
